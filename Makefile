@@ -6,7 +6,7 @@
 #    By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/03 12:07:22 by adahmad           #+#    #+#              #
-#    Updated: 2022/06/07 16:03:19 by adahmad          ###   ########.fr        #
+#    Updated: 2022/06/07 18:56:37 by adahmad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 
 SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_strlen.c ft_memset.c ft_atoi.c \
 	  ft_isprint.c ft_toupper.c ft_tolower.c ft_strlcpy.c ft_strlcat.c ft_bzero.c ft_memcpy.c \
-	  ft_strchr.c ft_strrchr.c 
+	  ft_strchr.c ft_strrchr.c ft_strncmp.c
 	  
 
 OBJ = ./*.o
