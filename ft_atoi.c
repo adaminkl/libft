@@ -6,7 +6,7 @@
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 13:58:05 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/07 10:43:31 by adahmad          ###   ########.fr       */
+/*   Updated: 2022/06/07 15:56:32 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,5 @@ int	ft_atoi(const char *str)
 	return (sign * num);
 }
 
-// Line 39 if not [KO] your atoi does not work with over long max value
-// Line 41 if not [KO] your atoi does not work with over long min value
+// Line 36 if not [KO] your atoi does not work with over long max value
+// Line 48 if not [KO] your atoi does not work with over long min value
