@@ -6,7 +6,7 @@
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 12:38:58 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/07 19:07:00 by adahmad          ###   ########.fr       */
+/*   Updated: 2022/06/08 17:49:29 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,9 @@ int				ft_strncmp(const char *str1, const char *str2, size_t n);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 void			*ft_memset(void *b, int c, size_t len);
+void			*ft_memcpy(void *restrict d, const void *restrict s, size_t n);
+void			*ft_memmove(void *dst, const void *src, size_t len);
 int				ft_atoi(const char *str);
+char			*ft_strdup(const char *s1);
 
 #endif
