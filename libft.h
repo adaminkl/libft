@@ -6,7 +6,7 @@
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 12:38:58 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/08 17:49:29 by adahmad          ###   ########.fr       */
+/*   Updated: 2022/06/08 19:38:23 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ void			*ft_memcpy(void *restrict d, const void *restrict s, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t len);
 int				ft_atoi(const char *str);
 char			*ft_strdup(const char *s1);
+void			*ft_calloc(size_t count, size_t size);
 
 #endif
