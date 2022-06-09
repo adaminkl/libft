@@ -6,7 +6,7 @@
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 12:38:58 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/09 12:32:50 by adahmad          ###   ########.fr       */
+/*   Updated: 2022/06/09 17:22:06 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct s_list
 	struct s_list	*next;
 }t_list;
 
+// ~~~~~~~~~~ PART 1 ~~~~~~~~~~~~~~//
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
@@ -48,5 +49,8 @@ int				ft_memcmp(const void *s1, const void *s2, size_t n);
 int				ft_atoi(const char *str);
 char			*ft_strdup(const char *s1);
 void			*ft_calloc(size_t count, size_t size);
+
+// ~~~~~~~~~~ PART 2 ~~~~~~~~~~~~~~//
+char			*ft_itoa(int n);
 
 #endif
