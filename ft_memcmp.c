@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/08 19:36:03 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/08 20:23:33 by adahmad          ###   ########.fr       */
+/*   Created: 2022/06/09 11:14:01 by adahmad           #+#    #+#             */
+/*   Updated: 2022/06/09 11:36:04 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*	The calloc() function contiguously allocates enough space for count objects 
-	that are size bytes of memory each and returns a pointer to the allocated 
-	memory.  The allocated memory is filled with bytes of value zero. */
+/*	The memcmp() function compares byte string s1 against byte string s2.  
+	Both strings are assumed to be n bytes long. */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	void	*ptr;
+	unsigned char	*ptr1;
+	unsigned char	*ptr2;
+	size_t			i;
 
-	ptr = malloc(count * size);
-	if (ptr == 0)
-		return (ptr);
-	ft_bzero(ptr, count * size);
-	return (ptr);
+	ptr1 = (unsigned char *)s1;
+	ptr2 = (unsigned char *)s2;
+	i = 0;
+	while (i < n)
+	{
+		if (ptr1[i] != ptr2[i])
+			return (ptr1[i] - ptr2[i]);
+		i++;
+	}
+	return (0);
 }

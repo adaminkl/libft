@@ -6,13 +6,13 @@
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 12:34:03 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/07 15:04:29 by adahmad          ###   ########.fr       */
+/*   Updated: 2022/06/09 09:11:01 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict d, const void *restrict s, size_t n)
+void	*ft_memcpy(void *d, const void *s, size_t n)
 {
 	unsigned char	*str1;
 	unsigned char	*str2;
