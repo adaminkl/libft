@@ -6,7 +6,7 @@
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 12:38:58 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/09 17:22:06 by adahmad          ###   ########.fr       */
+/*   Updated: 2022/06/11 16:09:07 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef struct s_list
 	void			*content;
 	size_t			content_size;
 	struct s_list	*next;
-}t_list;
+}							t_list;
 
 // ~~~~~~~~~~ PART 1 ~~~~~~~~~~~~~~//
 int				ft_isalpha(int c);
@@ -52,5 +52,10 @@ void			*ft_calloc(size_t count, size_t size);
 
 // ~~~~~~~~~~ PART 2 ~~~~~~~~~~~~~~//
 char			*ft_itoa(int n);
+void			ft_putchar_fd(char c, int fd);
+void			ft_putstr_fd(char *s, int fd);
+
+// ~~~~~~~~~~ BONUS ~~~~~~~~~~~~~~//
+t_list			*ft_lstnew(void *content);
 
 #endif
