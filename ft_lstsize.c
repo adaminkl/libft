@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/11 09:58:50 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/12 16:40:15 by adahmad          ###   ########.fr       */
+/*   Created: 2022/06/12 17:54:23 by adahmad           #+#    #+#             */
+/*   Updated: 2022/06/12 18:01:57 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//Counts the number of nodes in a list.
+
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*node;
+	int	i;
 
-	node = (t_list *)malloc(sizeof(*node));
-	if (node == NULL)
-		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
+	i = 0;
+	while (lst)
+	{
+		i++;
+		lst = lst-> next;
+	}
+	return (i);
 }

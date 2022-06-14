@@ -6,7 +6,7 @@
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 12:38:58 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/11 16:09:07 by adahmad          ###   ########.fr       */
+/*   Updated: 2022/06/14 08:09:49 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,8 @@
 typedef struct s_list
 {
 	void			*content;
-	size_t			content_size;
 	struct s_list	*next;
-}							t_list;
+}					t_list;
 
 // ~~~~~~~~~~ PART 1 ~~~~~~~~~~~~~~//
 int				ft_isalpha(int c);
@@ -39,7 +38,7 @@ char			*ft_strchr(const char *str, int c);
 char			*ft_strrchr(const char *str, int c);
 int				ft_strncmp(const char *str1, const char *str2, size_t n);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
+size_t			ft_strlcat(char *dest, const char *src, size_t size);
 char			*ft_strnstr(char *src, char *find, size_t len);
 void			*ft_memset(void *b, int c, size_t len);
 void			*ft_memcpy(void *d, const void *s, size_t n);
@@ -54,8 +53,16 @@ void			*ft_calloc(size_t count, size_t size);
 char			*ft_itoa(int n);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
+void			ft_putendl_fd(char *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 // ~~~~~~~~~~ BONUS ~~~~~~~~~~~~~~//
 t_list			*ft_lstnew(void *content);
+void			ft_lstadd_front(t_list **lst, t_list *new);
+void			ft_lstadd_back(t_list **lst, t_list *new);
+int				ft_lstsize(t_list *lst);
+t_list			*ft_lstlast(t_list *lst);
+void			ft_lstdelone(t_list *lst, void (*del)(void *));
 
 #endif

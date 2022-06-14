@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/11 09:58:50 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/12 16:40:15 by adahmad          ###   ########.fr       */
+/*   Created: 2022/06/13 18:58:31 by adahmad           #+#    #+#             */
+/*   Updated: 2022/06/14 08:11:51 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Applies the function ’f’ to each character of the string ’s’, and passing 
+its index as first argument to create a new string (with malloc(3)) resulting 
+from successive applications of ’f’. */
+
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
-{
-	t_list	*node;
+//char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+//{
 
-	node = (t_list *)malloc(sizeof(*node));
-	if (node == NULL)
-		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
-}
+//}

@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/11 09:58:50 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/12 16:40:15 by adahmad          ###   ########.fr       */
+/*   Created: 2022/06/13 17:01:46 by adahmad           #+#    #+#             */
+/*   Updated: 2022/06/13 17:12:28 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//Outputs the string ’s’ to the given file descriptor followed by a newline
+
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_putendl_fd(char *s, int fd)
 {
-	t_list	*node;
-
-	node = (t_list *)malloc(sizeof(*node));
-	if (node == NULL)
-		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
+	if (s != NULL)
+		write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
 }

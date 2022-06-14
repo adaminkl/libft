@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/11 09:58:50 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/12 16:40:15 by adahmad          ###   ########.fr       */
+/*   Created: 2022/06/12 18:10:49 by adahmad           #+#    #+#             */
+/*   Updated: 2022/06/12 18:13:43 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// Returns the last node of the list.
+
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*node;
-
-	node = (t_list *)malloc(sizeof(*node));
-	if (node == NULL)
+	if (!lst)
 		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
+	while (lst->next)
+	{
+		lst = lst->next;
+	}
+	return (lst);
 }
