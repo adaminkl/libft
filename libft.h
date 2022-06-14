@@ -6,7 +6,7 @@
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 12:38:58 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/14 08:09:49 by adahmad          ###   ########.fr       */
+/*   Updated: 2022/06/14 10:13:01 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,24 +30,24 @@ int				ft_isdigit(int c);
 int				ft_isalnum(int c);
 int				ft_isascii(int c);
 int				ft_isprint(int c);
+size_t			ft_strlen(const char *str);
+void			*ft_memset(void *b, int c, size_t len);
+void			ft_bzero(void *s, size_t n);
+void			*ft_memcpy(void *d, const void *s, size_t n);
+void			*ft_memmove(void *dst, const void *src, size_t len);
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
+size_t			ft_strlcat(char *dest, const char *src, size_t size);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
-size_t			ft_strlen(const char *str);
-void			ft_bzero(void *s, size_t n);
 char			*ft_strchr(const char *str, int c);
 char			*ft_strrchr(const char *str, int c);
 int				ft_strncmp(const char *str1, const char *str2, size_t n);
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
-size_t			ft_strlcat(char *dest, const char *src, size_t size);
-char			*ft_strnstr(char *src, char *find, size_t len);
-void			*ft_memset(void *b, int c, size_t len);
-void			*ft_memcpy(void *d, const void *s, size_t n);
-void			*ft_memmove(void *dst, const void *src, size_t len);
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
+char			*ft_strnstr(char *src, char *find, size_t len);
 int				ft_atoi(const char *str);
-char			*ft_strdup(const char *s1);
 void			*ft_calloc(size_t count, size_t size);
+char			*ft_strdup(const char *s1);
 
 // ~~~~~~~~~~ PART 2 ~~~~~~~~~~~~~~//
 char			*ft_itoa(int n);
@@ -64,5 +64,9 @@ void			ft_lstadd_back(t_list **lst, t_list *new);
 int				ft_lstsize(t_list *lst);
 t_list			*ft_lstlast(t_list *lst);
 void			ft_lstdelone(t_list *lst, void (*del)(void *));
+void			ft_lstclear(t_list **lst, void (*del)(void*));
+void			ft_lstiter(t_list *lst, void (*f)(void *));
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
+					void (*del)(void *));
 
 #endif
