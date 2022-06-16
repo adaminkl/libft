@@ -6,7 +6,7 @@
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 12:38:58 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/14 10:13:01 by adahmad          ###   ########.fr       */
+/*   Updated: 2022/06/16 15:39:56 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <ctype.h>
+# include <stddef.h>
 
 typedef struct s_list
 {
@@ -35,8 +36,8 @@ void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *d, const void *s, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t len);
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
-size_t			ft_strlcat(char *dest, const char *src, size_t size);
+size_t			ft_strlcpy(char *dest, const char *src, size_t dstsize);
+size_t			ft_strlcat(char *dest, const char *src, size_t dstsize);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
 char			*ft_strchr(const char *str, int c);
@@ -56,6 +57,8 @@ void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char			*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_strjoin(char const *s1, char const *s2);
 
 // ~~~~~~~~~~ BONUS ~~~~~~~~~~~~~~//
 t_list			*ft_lstnew(void *content);

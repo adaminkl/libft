@@ -6,7 +6,7 @@
 #    By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/03 12:07:22 by adahmad           #+#    #+#              #
-#    Updated: 2022/06/14 10:07:43 by adahmad          ###   ########.fr        #
+#    Updated: 2022/06/16 15:27:16 by adahmad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ MANDATORY	= 	ft_isalpha.c 		ft_toupper.c 		\
 				ft_strlcpy.c 							\
 				ft_strlcat.c 							\
 				ft_calloc.c 		ft_strdup.c 		\
+				ft_substr.c 		ft_strjoin.c		\
 				ft_putchar_fd.c 	ft_putstr_fd.c 		\
 				ft_itoa.c 			ft_putendl_fd.c 	\
 				ft_putnbr_fd.c 							\
