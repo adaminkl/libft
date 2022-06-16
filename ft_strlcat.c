@@ -6,7 +6,7 @@
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 10:50:53 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/16 15:37:24 by adahmad          ###   ########.fr       */
+/*   Updated: 2022/06/16 16:02:31 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,24 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
-	size_t	i;
-	size_t	total_length;
+	size_t	index;
 
-	i = 0;
-	while (*dest && i < dstsize)
+	if (dstsize < 1)
+		return (ft_strlen(src));
+	index = 0;
+	while (*dest != '\0' && index < dstsize)
 	{
-		++dest;
-		++i;
+		dest++;
+		index++;
 	}
-	total_length = ft_strlcpy(dest, src, dstsize - i);
-	return (total_length + 1);
+	while (*src != '\0' && index < dstsize - 1)
+	{
+		*dest++ = *src++;
+		index++;
+	}
+	if (index < dstsize)
+		*dest = '\0';
+	while (*src++ != '\0')
+		index++;
+	return (index);
 }

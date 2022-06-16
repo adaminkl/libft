@@ -6,7 +6,7 @@
 #    By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/03 12:07:22 by adahmad           #+#    #+#              #
-#    Updated: 2022/06/16 15:27:16 by adahmad          ###   ########.fr        #
+#    Updated: 2022/06/16 20:13:39 by adahmad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,7 @@ B_OBJ		=	$(BONUS:.c=.o)
 
 CC			=	@gcc
 RM			=	@rm -f
-CFLAGS		=	-Wall -Wextra -Werror -I.
+CFLAGS		=	-Wall -Werror -Wextra -O3
 
 NAME		=	libft.a
 
