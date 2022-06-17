@@ -6,7 +6,7 @@
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 12:38:58 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/16 19:51:43 by adahmad          ###   ########.fr       */
+/*   Updated: 2022/06/17 21:08:32 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,9 @@ void			ft_putnbr_fd(int n, int fd);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
+char			**ft_split(const char *s, char c);
+char			*ft_strtrim(char const *s1, char const *s2);
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 // ~~~~~~~~~~ BONUS ~~~~~~~~~~~~~~//
 t_list			*ft_lstnew(void *content);

@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/07 12:06:18 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/17 14:33:53 by adahmad          ###   ########.fr       */
+/*   Created: 2022/06/17 20:46:34 by adahmad           #+#    #+#             */
+/*   Updated: 2022/06/17 20:46:46 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strtrim(char const *s1, char const *s2)
 {
-	unsigned char	*dest;
-	size_t			i;
+	unsigned int	len;
+	char			*start;
 
-	dest = s;
-	i = 0;
-	while (i++ < n)
-		*dest++ = 0;
+	if (!s1 || !s2)
+		return (NULL);
+	while (*s1 && ft_strchr(s2, *s1))
+		s1++;
+	start = (char *)s1;
+	len = ft_strlen(s1);
+	while (len && ft_strchr(s2, *(s1 + len)))
+		len--;
+	return (ft_substr(start, 0, len + 1));
 }

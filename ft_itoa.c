@@ -6,46 +6,46 @@
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 17:10:39 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/09 17:50:57 by adahmad          ###   ########.fr       */
+/*   Updated: 2022/06/17 20:50:34 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	total_digits(int n)
+int	ft_numlen(int n, int base)
 {
-	int	i;
+	int	count;
 
-	i = 0;
-	while (n > 0)
-	{
-		i++;
-		n = n / 10;
-	}
-	return (i);
+	count = 0;
+	if (n <= 0)
+		++count;
+	while (n && ++count)
+		n /= base;
+	return (count);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		i;
+	int			len;
+	char		*ret;
+	const char	*digits = "0123456789";
 
-	i = 0;
+	len = ft_numlen(n, 10);
+	ret = malloc(sizeof(char) * (len + 1));
+	if (!ret)
+		return (0);
+	ret[len] = 0;
+	if (n == 0)
+		ret[0] = '0';
 	if (n < 0)
+		ret[0] = '-';
+	while (n)
 	{
-		n = -1 * n;
-		i++;
+		if (n > 0)
+			ret[--len] = digits[n % 10];
+		else
+			ret[--len] = digits[n % 10 * -1];
+		n /= 10;
 	}
-	i = i + total_digits(n);
-	str = malloc(sizeof(char) * (i + 1));
-	str[i] = '\0';
-	while (n > 0)
-	{
-		str[i - 1] = n % 10 + '0';
-		n = n / 10;
-		i--;
-	}
-	if (i == 1)
-		str[0] = '-';
-	return (str);
+	return (ret);
 }
