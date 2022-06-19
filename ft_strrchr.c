@@ -6,7 +6,7 @@
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 15:59:07 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/07 16:21:14 by adahmad          ###   ########.fr       */
+/*   Updated: 2022/06/19 18:35:27 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,16 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	char	*find;
-	char	*find2;
-	int		i;
+	char	*last;
 
-	find = (char *) str;
-	find2 = 0;
-	i = 0;
-	while (*(find + i))
+	last = 0;
+	while (*str)
 	{
-		if (*(find + i) == c)
-			find2 = find + i;
-		i++;
+		if (*str == (unsigned char) c)
+			last = (char *)str;
+			++str;
 	}
-	if (c == '\0')
-		return (find + i);
-	return (find2);
+	if (!c)
+		last = ((char *)str);
+	return (last);
 }
