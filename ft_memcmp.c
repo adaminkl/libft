@@ -6,12 +6,9 @@
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 11:14:01 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/09 11:36:04 by adahmad          ###   ########.fr       */
+/*   Updated: 2022/06/20 20:16:51 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*	The memcmp() function compares byte string s1 against byte string s2.  
-	Both strings are assumed to be n bytes long. */
 
 #include "libft.h"
 

@@ -6,28 +6,27 @@
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 15:29:06 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/07 15:41:29 by adahmad          ###   ########.fr       */
+/*   Updated: 2022/06/20 19:28:44 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* The C library function char *strchr(const char *str, int c) searches for the 
-   first occurrence of the character c (an unsigned char) in the string pointed 
-   to by the argument str. */
-
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	unsigned int	i;
+	char	*first;
 
-	i = 0;
-	while (str[i])
+	first = 0;
+	while (*s)
 	{
-		if (str[i] == (char)c)
-			return ((char *)&str[i]);
-		i++;
+		if (*s == (unsigned char) c)
+		{
+			first = (char *)s;
+			return (first);
+		}
+		++s;
 	}
-	if ((char)c == str[i])
-		return ((char *)&str[i]);
-	return (NULL);
+	if (!c)
+		first = ((char *)s);
+	return (first);
 }

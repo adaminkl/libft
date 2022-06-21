@@ -6,11 +6,11 @@
 #    By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/03 12:07:22 by adahmad           #+#    #+#              #
-#    Updated: 2022/06/19 16:54:01 by adahmad          ###   ########.fr        #
+#    Updated: 2022/06/20 14:27:07 by adahmad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME 		= 	libft.a
 
 MANDATORY	= 	ft_isalpha.c 		\
 				ft_isdigit.c 		\
@@ -61,7 +61,7 @@ BONUS 		=	ft_lstnew.c 		\
 
 B_OBJ		=	$(BONUS:.c=.o)
 
-GCC = @gcc -Wall -Wextra -Werror
+GCC 		= @gcc -Wall -Wextra -Werror
 
 all: $(NAME)
 

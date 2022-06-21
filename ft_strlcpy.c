@@ -6,7 +6,7 @@
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 10:41:43 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/16 14:49:39 by adahmad          ###   ########.fr       */
+/*   Updated: 2022/06/20 18:08:44 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 	unsigned int	index;
 	unsigned int	counter;
 
-	index = 0;
-	while (src[index] != '\0')
-		index++;
+	index = ft_strlen(src);
 	counter = 0;
 	if (dstsize != 0)
 	{

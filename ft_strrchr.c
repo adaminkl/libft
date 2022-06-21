@@ -6,7 +6,7 @@
 /*   By: adahmad <adahmad@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 15:59:07 by adahmad           #+#    #+#             */
-/*   Updated: 2022/06/19 18:35:27 by adahmad          ###   ########.fr       */
+/*   Updated: 2022/06/20 19:15:54 by adahmad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strrchr(const char *str, int c)
 	{
 		if (*str == (unsigned char) c)
 			last = (char *)str;
-			++str;
+		++str;
 	}
 	if (!c)
 		last = ((char *)str);
